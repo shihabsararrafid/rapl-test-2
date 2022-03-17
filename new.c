@@ -3,7 +3,7 @@ int main()
 {
     int result;
     // int l = 4, s = 2;
-    int gcd(int l, int s)
+    long long int gcd(long long int l, long long int s)
     {
         int res;
         if (s == 0)
@@ -12,14 +12,14 @@ int main()
         }
         else if (s != 0)
         {
-            int rem = l % s;
+            long long int rem = l % s;
             l = s;
             s = rem;
             return gcd(l, s);
         }
         return res;
     }
-    // result = gcd(8, 6);
-    printf("%d", gcd(5, 2));
+    // result = gcd(366, 60);
+    printf("%lld", gcd(978, 959735253748949470));
     return 0;
 }

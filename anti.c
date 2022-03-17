@@ -1,12 +1,13 @@
 // anti problems
 
 #include <stdio.h>
+
 int main()
 {
-    unsigned long int a, b, c, d, i, e, l, s, res;
-    signed long int count1, count2, count3, count4, count5, rem, uni1, lcm, uni2, com1, com2, tot1, tot2;
+    long long int a, b, c, d, i, e, l, s, res;
+    long long int count1, count2, count3, count4, count5, rem, uni1, lcm, uni2, com1, com2, tot1, tot2;
 
-    scanf("%lu %lu %lu %lu", &a, &b, &c, &d);
+    scanf("%lld %lld %lld %lld", &a, &b, &c, &d);
 
     if (a < b)
     {
@@ -30,7 +31,8 @@ int main()
     }
     int result;
     // int l = 4, s = 2;
-    unsigned long int gcd(unsigned long int l, unsigned long int s)
+    // recursion function to get the lcd
+    long long int gcd(long long int l, long long int s)
     {
         int res;
         if (s == 0)
@@ -39,7 +41,7 @@ int main()
         }
         else if (s != 0)
         {
-            int rem = l % s;
+            long long int rem = l % s;
             l = s;
             s = rem;
             return gcd(l, s);
@@ -63,7 +65,7 @@ int main()
 
     res = count5 - (tot1 - tot2);
 
-    printf("%lu\n", res);
+    printf("%lld\n", res);
 
     return 0;
 }
