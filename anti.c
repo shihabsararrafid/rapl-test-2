@@ -50,17 +50,13 @@ int main()
     }
     lcm = (c * d) / gcd(s, l);
     // result = gcd(8, 6);
-    count1 = e / c;
-    count2 = e / d;
-    count3 = (i - 1) / c;
-    count4 = (i - 1) / d;
 
-    com1 = 0;
-    com2 = 0;
+    // com1 = 0;
+    // com2 = 0;
     com1 = e / lcm;
     com2 = (i - 1) / lcm;
-    tot1 = count1 + count2 - com1;
-    tot2 = count3 + count4 - com2;
+    tot1 = (e / c) + (e / d) - com1;
+    tot2 = ((i - 1) / c) + ((i - 1) / d) - com2;
     count5 = (e - i) + 1;
 
     res = count5 - (tot1 - tot2);
