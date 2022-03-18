@@ -1,6 +1,22 @@
-// anti problems
+// anti problems which i can not solve
 
 #include <stdio.h>
+long long int gcd(long long int l, long long int s)
+{
+    int res;
+    if (s == 0)
+    {
+        res = l;
+    }
+    else if (s != 0)
+    {
+        long long int rem = l % s;
+        l = s;
+        s = rem;
+        return gcd(l, s);
+    }
+    return res;
+}
 
 int main()
 {
@@ -32,22 +48,28 @@ int main()
     int result;
     // int l = 4, s = 2;
     // recursion function to get the lcd
-    long long int gcd(long long int l, long long int s)
-    {
-        int res;
-        if (s == 0)
-        {
-            res = l;
-        }
-        else if (s != 0)
-        {
-            long long int rem = l % s;
-            l = s;
-            s = rem;
-            return gcd(l, s);
-        }
-        return res;
-    }
+    // long long int gcd(long long int l, long long int s)
+    // {
+    //     int res;
+    //     if (s == 0)
+    //     {
+    //         res = l;
+    //     }
+    //     else if (s != 0)
+    //     {
+    //         long long int rem = l % s;
+    //         l = s;
+    //         s = rem;
+    //         return gcd(l, s);
+    //     }
+    //     return res;
+    // }
+    // long long int gcd(long long int s, long long int l)
+    // {
+    //     if (s == 0)
+    //         return l;
+    //     return gcd(s, l % s);
+    // }
     lcm = (c * d) / gcd(s, l);
     // result = gcd(8, 6);
 
